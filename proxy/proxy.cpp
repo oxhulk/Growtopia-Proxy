@@ -140,6 +140,7 @@ int main() {
     SetConsoleTitleA("proxy by ama");
     SetConsoleCtrlHandler((PHANDLER_ROUTINE)exit_handler, true);
 #endif
+    server->itemdatabase.load_from_file("items.dat");
     setgtserver();
     std::thread http(startHTTPS);
     http.detach();
