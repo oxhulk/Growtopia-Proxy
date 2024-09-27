@@ -3,6 +3,7 @@
 #include "proton/variant.hpp"
 #include "enet/include/enet.h"
 #include "world/world.h"
+#include "itemdatabase/itemdatabase.h"
 
 class Server {
    private:
@@ -22,6 +23,7 @@ class Server {
     int port = 17182;
     int proxyport = 17191;
     World world;
+    ItemDatabase itemdatabase;
     bool start();
     void quit();
     bool setup_client();
