@@ -109,7 +109,7 @@ void ItemDatabase::load_from_file(const std::string& filePath) {
         }
         if (version >= 17) data += 4;
         if (version >= 18) data += 4;
-
+        if (version >= 19) data += 9;
         items[item.itemID] = item;
     }
 }
